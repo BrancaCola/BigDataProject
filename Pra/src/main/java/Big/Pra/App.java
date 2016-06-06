@@ -11,14 +11,12 @@ import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.*;
+import org.apache.spark.streaming.Durations;
 import org.apache.spark.streaming.api.java.*;
 
 import scala.Tuple2;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
@@ -33,14 +31,11 @@ public class App
     	
     	
         SparkConf conf = new SparkConf().setAppName(appName).setMaster(master);
-        //JavaStreamingContext ssc = new JavaStreamingContext(conf, Duration(1000));
+        JavaStreamingContext ssc = new JavaStreamingContext(conf, Durations.seconds(1));
         
     }
-
     
-    
-    
-    
+   
     
     
     public static void counterExample (){
