@@ -28,7 +28,7 @@ public class JavaNetworkWordCount {
     public static void streamingExample () {
     	
     	SparkConf conf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount");
-    	JavaStreamingContext jssc = new JavaStreamingContext(conf, Durations.seconds(10));
+    	JavaStreamingContext jssc = new JavaStreamingContext(conf, Durations.seconds(2)); //sets time interval of streams
         
     	 // Create a DStream that will connect to hostname:port, like localhost:9999
         JavaReceiverInputDStream<String> lines = jssc.socketTextStream("localhost", 9999);
