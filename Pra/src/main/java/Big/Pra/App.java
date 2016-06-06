@@ -2,13 +2,16 @@ package Big.Pra;
 
 import java.util.Arrays;
 
+import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
-import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.SparkConf;
+import org.apache.spark.streaming.api.java.JavaStreamingContext;
+import org.apache.spark.*;
+import org.apache.spark.streaming.api.java.*;
 
 import scala.Tuple2;
 
@@ -20,6 +23,27 @@ public class App
 {
     public static void main( String[] args )
     {
+    	//counterExample();
+    }
+    
+    public static void streamingExample (){
+    	String appName, master;
+    	appName = "org.sparkexample2.streaming";
+    	master = "local";
+    	
+    	
+        SparkConf conf = new SparkConf().setAppName(appName).setMaster(master);
+        //JavaStreamingContext ssc = new JavaStreamingContext(conf, Duration(1000));
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    public static void counterExample (){
     	//define path
     	String inputFileName = "samples/test.txt" ;
         String outputDirName = "output" ;
@@ -43,6 +67,7 @@ public class App
 		counts.saveAsTextFile(outputDirName);
 		//Test
     }
+    
 }
 
 
