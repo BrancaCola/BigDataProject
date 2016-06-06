@@ -16,6 +16,12 @@ import org.apache.spark.streaming.api.java.*;
 
 import scala.Tuple2;
 
+/*
+ * install (OpenBSD)-Netcat
+ * in console: nc -lk 9999
+ * run JavaNetworkWordCount.java
+ * type in stuff
+ */
 
 public class JavaNetworkWordCount {
     
@@ -60,7 +66,6 @@ public class JavaNetworkWordCount {
 	public static void main( String[] args ) {
     	
 		streamingExample();
+		
     }
 }
-
-
