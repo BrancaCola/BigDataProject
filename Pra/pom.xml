@@ -32,5 +32,10 @@
       <artifactId>spark-streaming_2.10</artifactId>
       <version>1.6.1</version>
     </dependency>
+	<dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming-twitter_2.10</artifactId>
+      <version>0.9.0-incubating</version>
+	</dependency>
   </dependencies>
 </project>
