@@ -1,6 +1,10 @@
-Twitter-Streaming über ... nicht oder nur bedingt möglich. Kaum Resultate.
+Twitter-Streaming über Scala-Anwendung mit Spark Streaming Twitter Utils liefert Resultate.
 
 16.6.
-Durchführung Twitter Streaming über curl '.json' mit 4 Acc-Details. 
+Durchführung Twitter Streaming über Twitter Streaming API (curl --get 'https://stream.twitter.com/1.1/statuses/filter.json'
+--data 'track=%23bitcoin'...):
 Verbindung war über eine halbe Stunde möglich und gewährte Zugriff zu vielen Tweets.
+
+17.6.
+Streaming von Tweets über 11 Stunden: 14521 #Bitcoin-Tweets
 
