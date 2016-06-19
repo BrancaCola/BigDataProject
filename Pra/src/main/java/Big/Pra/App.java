@@ -1,7 +1,5 @@
 package Big.Pra;
 
-import java.util.Arrays;
-
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -9,12 +7,12 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
-import org.apache.spark.streaming.api.java.JavaStreamingContext;
-import org.apache.spark.*;
 import org.apache.spark.streaming.Durations;
-import org.apache.spark.streaming.api.java.*;
+import org.apache.spark.streaming.api.java.JavaStreamingContext;
+
 
 import scala.Tuple2;
+import scala.collection.immutable.Iterable;
 
 
 public class App 
@@ -35,7 +33,6 @@ public class App
         
     }
     
-   
     
     
     public static void counterExample (){
